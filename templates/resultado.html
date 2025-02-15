@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado del Análisis</title>
+</head>
+<body>
+    <h1>Resultado del Análisis</h1>
+    <p><strong>URL analizada:</strong> {{ url }}</p>
+    
+    <h2>Criterios evaluados</h2>
+    <ul>
+        {% for criterio, valor in criterios.items() %}
+            <li>{{ criterio }}: {{ "✅ Sí" if valor else "❌ No" }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Puntuación:</h2>
+    <p>{{ puntuacion }} / 100</p>
+</body>
+</html>
